@@ -66,11 +66,29 @@
     <ul id="articleList" data-role="listview" data-divider-theme="b" class="list">
         <li data-theme="c" class="vi-bullet">
             <a href="#v1" data-transition="slide" onclick="playSelectedVideo('video1')">
-                <div class="source">Russell Reynolds Associates</div><div class="ar-date">Jan 16, 2013</div><br/>
-                <div class="ar-title">Cardinal Health's Chairman & CEO George Barrett on Board Leadership</div>
+                <div class="source">Youtube</div><br/>
+                <div class="ar-title">Citi 2013 Shareholder Meeting Opening Remarks</div>
             </a>
         </li>
-        
+        <li data-theme="c" class="vi-bullet">
+            <a href="#v2" data-transition="slide" onclick="playSelectedVideo('video2')">
+                <div class="source">Youtube</div><br/>
+                <div class="ar-title">Citi CEO Corbat's First Full Day on the Job</div>
+            </a>
+        </li>
+        <li data-theme="c" class="vi-bullet">
+            <a href="#v3" data-transition="slide" onclick="playSelectedVideo('video3')">
+                <div class="source">Youtube</div><br/>
+                <div class="ar-title">FI2020 Global Forum_ Michael Corbat, CEO, Citi</div>
+            </a>
+        </li>
+        <li data-theme="c" class="vi-bullet">
+            <a href="#v4" data-transition="slide" onclick="playSelectedVideo('video4')">
+                <div class="source">Youtube</div><br/>
+                <div class="ar-title">Citigroup CEO on Globalization & Challenges Ahead</div>
+            </a>
+        </li>
+
         <li data-theme="c" class="ar-bullet">
             <a href="#a16" data-transition="slide">
                 <div class="source">dealbreaker.com</div><div class="ar-date">Dec 02, 2013</div><br/>
@@ -220,11 +238,62 @@
     </a>
     <img class="gb-ct-img" src="img/MichaelCorbat.png" alt="image"/>
     <div class="d-title">
-        Cardinal Health's Chairman & CEO George Barrett on Board Leadership
+        Citi 2013 Shareholder Meeting Opening Remarks
     </div>
     <div class="a-body">
-        <video id="video1" style="width:300px" controls>
-            <source src="http://54.215.134.149:8080/file/getFile/g1.mp4" type="video/mp4">
+        <video id="video1" style="width:98%" controls>
+            <source src="https://s3-us-west-2.amazonaws.com/fptusa/Michael+Corbat/Citi_+2013+Shareholder+Meeting+Opening+Remarks.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<!--v2-->
+<div data-role="page" id="v2">
+    <a class="back arrow" href='#articles' data-transition="slide" onclick="stopCurrentVideo();">
+        Back
+    </a>
+    <img class="gb-ct-img" src="img/MichaelCorbat.png" alt="image"/>
+    <div class="d-title">
+        Citi CEO Corbat's First Full Day on the Job
+    </div>
+    <div class="a-body">
+        <video id="video2" style="width:98%" controls>
+            <source src="https://s3-us-west-2.amazonaws.com/fptusa/Michael+Corbat/Citi+CEO+Corbat's+First+Full+Day+on+the+Job.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<!--v3-->
+<div data-role="page" id="v3">
+    <a class="back arrow" href='#articles' data-transition="slide" onclick="stopCurrentVideo();">
+        Back
+    </a>
+    <img class="gb-ct-img" src="img/MichaelCorbat.png" alt="image"/>
+    <div class="d-title">
+        FI2020 Global Forum_ Michael Corbat, CEO, Citi
+    </div>
+    <div class="a-body">
+        <video id="video3" style="width:98%" controls>
+            <source src="https://s3-us-west-2.amazonaws.com/fptusa/Michael+Corbat/FI2020+Global+Forum_+Michael+Corbat,+CEO,+Citi.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<!--v4-->
+<div data-role="page" id="v4">
+    <a class="back arrow" href='#articles' data-transition="slide" onclick="stopCurrentVideo();">
+        Back
+    </a>
+    <img class="gb-ct-img" src="img/MichaelCorbat.png" alt="image"/>
+    <div class="d-title">
+        Citigroup CEO on Globalization & Challenges Ahead
+    </div>
+    <div class="a-body">
+        <video id="video4" style="width:98%" controls>
+            <source src="https://s3-us-west-2.amazonaws.com/fptusa/Michael+Corbat/THE+LATEST+NEWS+_+Citigroup+CEO+on+Globalization+&+Challenges Ahead.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -1805,7 +1874,7 @@
     function getTweets() {
         $("#tweetList").html("");
         $("#loader").css("visibility","visible");
-        var twitterAPI = "http://54.215.134.149:8080/data/getdata?type=SearchTweets&q='Citigroup'";
+        var twitterAPI = "http://54.201.207.238:8080/data/getdata?type=SearchTweets&q='Citigroup'";
         $.getJSON( twitterAPI, {
             format: "json"
         }).done(function( data ) {
